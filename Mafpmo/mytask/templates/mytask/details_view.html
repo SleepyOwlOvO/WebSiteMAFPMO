@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ task.title }}{% endblock %}
+
+{% block content %}
+    <div class="form-group">
+
+        <h1>{{ task.title }}</h1>
+        <label>
+            <input type="checkbox" name="coding-notes" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            {{ task.task }}
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="coding-notes" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            {{task.subtask}}
+        </label>
+        <p>{{task.comment}}</p>
+        <a href="{% url 'task-delete' task.id %}" class="btn btn-danger">Удалить задачу</a>
+        <a href="{% url 'task-update' task.id %}" class="btn btn-info">Обновить задачу</a>
+    </div>
+{% endblock %}

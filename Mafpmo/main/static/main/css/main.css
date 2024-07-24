@@ -1,0 +1,206 @@
+body {
+    background: #2c2c2c;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside .logo{
+    font-size: 40px;
+    margin-left: 10 px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3{
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+aside a {text-decoration: none;}
+
+aside ul li{
+    color: #fff;
+    display:block;
+    margin-top: 20px;
+    transition: transform .3s ease;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features{
+    float: left;
+    color: #fff;
+    margin-top: 25px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto;}
+
+.alert-warning {
+    float: center;
+    clear: both;
+    width: 800px;
+    margin: 20px 25%;
+    text-align: left;
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 400px;
+}
+
+textarea {
+    height: 150px; /* Устанавливаем высоту 100 пикселей */
+}
+
+footer {
+    color: #fff;
+    background: #181818;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+footer h3  {
+    opacity: 0.5;
+    font-size: 25px;
+}
+
+footer p  {
+    opacity: 0.5;
+}
+
+.real-checkbox{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.custom-checkbox{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #7e9bbd;
+    border-radius: 4px;
+    margin-right: 5px;
+    vertical-align: sub;
+    background-color: #fff
+
+}
+
+.custom-checkbox::before {
+    content: '';
+
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-image: url('./check-solid.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    margin-left: 1px;
+    transition: 0.2s ease-in;
+    background-color: #fff
+
+}
+
+.real-checkbox:checked + .custom-checkbox::before {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.form-group{
+    float: left;
+    color: #fff;
+    margin-top: 25px;
+    text-align: left;
+    width: 75%;
+    margin-left: 20px;
+    line-height: 2;
+}
+.features-main{
+    display:block;
+    float: left;
+    color: #fff;
+    margin-top: 25px;
+    text-align: left;
+    width: 75%;
+    margin-left: 20px;
+    line-height: 2;
+}
+.features-main h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.features-main h3{
+    margin-left: 2.5%;
+    margin-bottom: 25px;
+}
+
+.container {
+    overflow: hidden; /* очищаем поток и задаем пространство для дочерних элементов */
+}
+
+.text {
+    float: left; /* выравниваем текст слева */
+    width: 50%; /* устанавливаем ширину контейнера для текста */
+}
+
+
+.original-image{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.image {
+    background-image: url('./productivnost-i-effectivnost-1024x642.jpg');
+    float: left; /* выравниваем картинку слева */
+    width: 40%;
+    height: 40%;
+    margin-left: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.label-font{
+    font-size: 30px;
+    font-weight:bold;
+}
+
+.about{
+    margin-left: 25px;
+    margin-right: 40px;
+}
